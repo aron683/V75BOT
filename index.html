@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="FlipMasterX - The Ultimate V75 Sniper Bot for Fast, Accurate Entries. Start Flipping Profits Today."/>
+  <meta name="author" content="Tiisetso" />
+  <meta property="og:title" content="FlipMasterX - V75 Sniper Bot"/>
+  <meta property="og:description" content="Sniping Volatility 75 with real entry precision. R350. One-time unlock. Pure hustle."/>
+  <meta property="og:image" content="flipmasterx-preview.jpg"/>
+  <meta property="og:url" content="https://bot.etherealink.com"/>
+  <title>FlipMasterX | V75 Sniper Bot</title>
+  <link rel="icon" href="favicon.png" />
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #0e0e0e; color: white; }
+    header { text-align: center; padding: 40px 20px; background: #1a1a1a; }
+    h1 { font-size: 2.5em; color: #00ff99; margin: 10px 0; }
+    p.lead { font-size: 1.2em; color: #ccc; }
+    .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
+    .features, .preview { margin-top: 40px; }
+    .features li { margin-bottom: 10px; font-size: 1.1em; }
+    .btn-buy { display: inline-block; padding: 12px 24px; background: #00ff99; color: black; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; margin-top: 20px; font-size: 1.1em; }
+    img.preview-img { width: 100%; max-width: 600px; margin-top: 20px; border-radius: 10px; border: 2px solid #00ff99; }
+    footer { text-align: center; padding: 20px; background: #111; font-size: 0.9em; color: #777; }
+  </style>
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>FlipMasterX</h1>
+  <p class="lead">The Ultimate V75 Sniper Bot — Precision. Speed. Profit.</p>
+  <button class="btn-buy" onclick="payWithPaystack()">Buy Now – R350</button>
+</header>
+
+<div class="container">
+  <section class="features">
+    <h2>🔥 Features:</h2>
+    <ul>
+      <li>Snipes breakout entries on Volatility 75 Index</li>
+      <li>Live signal accuracy built with chart logic</li>
+      <li>Real chart screenshots showing clean profits</li>
+      <li>One-time unlock — no monthly fees</li>
+      <li>Trusted by hustlers across South Africa</li>
+    </ul>
+  </section>
+
+  <section class="preview">
+    <h2>📸 Real Profitable Setups:</h2>
+    <img src="snipe1.jpg" alt="Win Screenshot 1" class="preview-img" />
+    <img src="snipe2.jpg" alt="Win Screenshot 2" class="preview-img" />
+  </section>
+</div>
+
+<footer>
+  Powered by Tiisetso 🧠 | © 2025 FlipMasterX
+</footer>
+
+<script>
+  function payWithPaystack() {
+    let handler = PaystackPop.setup({
+      key: 'pk_test_0123456789abcdef0123456789abcdef01234567', // Replace with your real key later
+      email: 'buyer@example.com',
+      amount: 35000,
+      currency: 'ZAR',
+      callback: function(response) {
+        alert("✅ Payment complete! Your download is now unlocked.");
+        window.location.href = "FlipMasterX.apk"; // Replace with actual hosted APK
+      },
+      onClose: function() {
+        alert("Payment closed. Try again to unlock the bot.");
+      }
+    });
+    handler.openIframe();
+  }
+</script>
+
+</body>
+    </html>
