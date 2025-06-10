@@ -18,9 +18,13 @@
   <style>
     body { font-family: sans-serif; background: #0f0f0f; color: #fff; margin: 0; }
     header { text-align: center; padding: 20px; font-size: 24px; font-weight: bold; background: #111; }
-    .bot { margin: 20px; padding: 20px; background: #1c1c1c; border-radius: 10px; box-shadow: 0 0 10px #00ff88; }
-    .bot h2 { color: #00ff88; margin: 0 0 10px; }
-    .buy-btn { background: #00ff88; color: #000; font-weight: bold; padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; }
+    .bot, .testimonial { margin: 20px; padding: 20px; background: #1c1c1c; border-radius: 10px; box-shadow: 0 0 10px #00ff88; }
+    .bot h2, .testimonial h3 { color: #00ff88; margin: 0 0 10px; }
+    .buy-btn, .chart-btn {
+      background: #00ff88; color: #000; font-weight: bold;
+      padding: 10px 20px; border: none; border-radius: 10px;
+      cursor: pointer; text-decoration: none; display: inline-block;
+    }
     .chat-msg { background: #333; margin: 5px 0; padding: 6px 10px; border-radius: 6px; }
     #chatToggle {
       position: fixed; bottom: 80px; right: 20px;
@@ -41,34 +45,53 @@
     input#chatInput {
       width: 90%; padding: 6px; margin-top: 10px; border: none; border-radius: 6px;
     }
+    .stars {
+      color: gold;
+      margin-top: 5px;
+    }
   </style>
 </head>
 <body>
 
 <header>🔥 V75 Trading Bots – FlipMasterX, Sniper Combo, Breakout</header>
 
+<!-- Live Chart Button at Top -->
+<div style="text-align: center; margin: 30px 0;">
+  <h2 style="color:#00ff88;">📊 Live Volatility 75 Chart</h2>
+  <a class="chart-btn" href="https://smarttrader.deriv.com/charts/V75" target="_blank">🔍 View Live V75 Chart on Deriv</a>
+</div>
+
+<!-- Bot Section -->
 <div class="bot">
   <h2>🌀 FlipMasterX – R350</h2>
   <p>Sniper-level bot for Volatility 75. Mobile-ready, detects clean buy zones with sniper accuracy.</p>
-  <button class="buy-btn" onclick="window.open('https://etherealink.gumroad.com/l/asukq')">Buy FlipMasterX</button>
+  <a class="buy-btn" href="https://etherealink.gumroad.com/l/asukq" target="_blank">Buy FlipMasterX</a>
 </div>
 
 <div class="bot">
   <h2>🎯 Sniper Combo – R500</h2>
   <p>Double confirmation system: dashboard + signals. Boost precision, reduce risk on every V75 move.</p>
-  <button class="buy-btn" onclick="window.open('https://etherealink.gumroad.com/l/asukq')">Buy Sniper Combo</button>
+  <a class="buy-btn" href="https://etherealink.gumroad.com/l/asukq" target="_blank">Buy Sniper Combo</a>
 </div>
 
 <div class="bot">
   <h2>🚨 Breakout Entry – R1000</h2>
   <p>Auto trades resistance breakouts on Volatility 75 Index. Full SL/TP strategy built in.</p>
-  <button class="buy-btn" onclick="window.open('https://etherealink.gumroad.com/l/asukq')">Buy Breakout Bot</button>
+  <a class="buy-btn" href="https://etherealink.gumroad.com/l/asukq" target="_blank">Buy Breakout Bot</a>
 </div>
 
 <div class="bot">
   <h2>💼 Full Bundle – R2000</h2>
   <p>Get all 3 bots at once: FlipMasterX, Sniper Combo & Breakout Pro. Instant access, save money.</p>
-  <button class="buy-btn" onclick="window.open('https://etherealink.gumroad.com/l/asukq')">Buy Full Bundle</button>
+  <a class="buy-btn" href="https://etherealink.gumroad.com/l/asukq" target="_blank">Buy Full Bundle</a>
+</div>
+
+<!-- Testimonials -->
+<div class="testimonial">
+  <h3>💬 Recent Comments</h3>
+  <p>“This bot flipped my V75 trades in just 2 days. 5 stars from me.”<br><span class="stars">★★★★★</span></p>
+  <p>“Sniper Combo is 🔥🔥🔥. I finally understand entries.”<br><span class="stars">★★★★★</span></p>
+  <p>“I made back the R2000 bundle cost on day one. Serious tool.”<br><span class="stars">★★★★★</span></p>
 </div>
 
 <!-- AI Chatbot -->
@@ -79,13 +102,6 @@
     <div class="chat-msg">Welcome to SniperBot AI. Ask me anything about buying these bots.</div>
   </div>
   <input type="text" id="chatInput" placeholder="Ask about price or how to buy..." />
-</div>
-
-<!-- Live V75 Chart -->
-<div style="margin: 40px auto; text-align: center;">
-  <h2 style="color:#00ff88;">📊 Live Volatility 75 Chart</h2>
-  <iframe src="https://smarttrader.deriv.com/charts/V75"
-    width="100%" height="500" style="border: none; border-radius: 10px; box-shadow: 0 0 10px #00ff88;"></iframe>
 </div>
 
 <script>
