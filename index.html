@@ -1,4 +1,3 @@
-<!-- Final Paste Begins -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,22 +22,66 @@
       50%{transform:scale(1.07);}
       100%{transform:scale(1);}
     }
-    .whatsapp-float {
-      position:fixed; bottom:20px; left:20px; z-index:999;
-    }
     .testimonial, .view-counter, .demo-preview, .before-after {
       margin:10px 20px; padding:10px; background:#222; border-radius:8px;
+    }
+    .chat-msg {
+      background: #333;
+      padding: 6px 10px;
+      margin: 5px 0;
+      border-radius: 8px;
+    }
+    input#chatInput {
+      width: 90%;
+      padding: 6px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 6px;
     }
     .fake-popup {
       position:fixed; bottom:90px; left:50%; transform:translateX(-50%);
       background:#111; color:#00ff88; padding:10px 20px;
-      border-radius:8px; animation:fadePopup 5s infinite;
+      border-radius:8px;
     }
-    @keyframes fadePopup {
-      0% {opacity:0;}
-      10% {opacity:1;}
-      90% {opacity:1;}
-      100% {opacity:0;}
+    #chatToggle {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background: #00ff88;
+      color: black;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      z-index: 999;
+    }
+    #chatBox {
+      position: fixed;
+      bottom: 130px;
+      right: 20px;
+      width: 280px;
+      background: #1c1c1c;
+      color: white;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 0 10px #00ff88;
+      display: none;
+      z-index: 999;
+    }
+    #chatBox h4 {
+      margin-top: 0;
+      color: #00ff88;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #exitChat {
+      background: none;
+      border: none;
+      color: red;
+      font-weight: bold;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -88,11 +131,6 @@
 </div>
 
 <div class="view-counter">📊 1,427 people viewed this page today</div>
-<div class="fake-popup">🔥 Someone just bought FlipMasterX 2 mins ago</div>
-
-<a class="whatsapp-float" href="https://wa.me/yourphonenumber?text=Hi%20I'm%20interested%20in%20your%20V75%20Bots" target="_blank">
-  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"/>
-</a>
 
 <!-- Screenshot Proof Images -->
 <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 20px;">
@@ -102,63 +140,7 @@
   <img src="snipe4.png" alt="All Bots Bundle Result" style="width: 180px; margin: 10px; border-radius: 10px;">
 </div>
 
-<!-- Enhanced Fake AI Chat -->
-<style>
-#chatToggle {
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  background: #00ff88;
-  color: black;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: bold;
-  z-index: 999;
-}
-#chatBox {
-  position: fixed;
-  bottom: 130px;
-  right: 20px;
-  width: 280px;
-  background: #1c1c1c;
-  color: white;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 0 10px #00ff88;
-  display: none;
-  z-index: 999;
-}
-#chatBox h4 {
-  margin-top: 0;
-  color: #00ff88;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.chat-msg {
-  background: #333;
-  padding: 6px 10px;
-  margin: 5px 0;
-  border-radius: 8px;
-}
-input#chatInput {
-  width: 90%;
-  padding: 6px;
-  margin-top: 10px;
-  border: none;
-  border-radius: 6px;
-}
-#exitChat {
-  background: none;
-  border: none;
-  color: red;
-  font-weight: bold;
-  cursor: pointer;
-}
-</style>
-
+<!-- SniperBot AI -->
 <button id="chatToggle">💬 Ask SniperBot AI</button>
 <div id="chatBox">
   <h4>SniperBot AI <button id="exitChat">❌</button></h4>
@@ -183,13 +165,15 @@ const responses = {
   "refund": "Sorry champ, no refunds after download. We offer full preview first.",
   "beginner": "Perfect for beginners. Just follow the included guide and install.",
   "start": "You can start with just R200 and grow fast with sniper entries.",
-  "support": "We're always on WhatsApp to help if needed!"
+  "support": "We're always online. Ask me anything.",
+  "buy": "Use any green 'Unlock' button above to purchase instantly.",
+  "bot": "These bots work on MT5. FlipMasterX is mobile-friendly too.",
+  "entry": "Our bots detect sniper entries after level confirmation."
 };
 
 toggleBtn.onclick = () => {
   chatBox.style.display = "block";
 };
-
 exitChat.onclick = () => {
   chatBox.style.display = "none";
 };
@@ -205,7 +189,6 @@ chatInput.addEventListener("keydown", function(event) {
 
       const reply = document.createElement("div");
       reply.className = "chat-msg";
-
       const lower = userMsg.toLowerCase();
       let answered = false;
       for (let key in responses) {
@@ -216,7 +199,7 @@ chatInput.addEventListener("keydown", function(event) {
         }
       }
       if (!answered) {
-        reply.textContent = "🤖 I'm still learning. Please WhatsApp us directly.";
+        reply.textContent = "🤖 I'm still learning. Try asking differently.";
       }
       chatLog.appendChild(reply);
       chatInput.value = "";
@@ -224,6 +207,15 @@ chatInput.addEventListener("keydown", function(event) {
     }
   }
 });
+
+// Show fake popup ONCE after 2 mins
+setTimeout(() => {
+  const popup = document.createElement("div");
+  popup.className = "fake-popup";
+  popup.textContent = "🔥 Someone just bought FlipMasterX 2 mins ago";
+  document.body.appendChild(popup);
+  setTimeout(() => popup.remove(), 8000);
+}, 120000);
 </script>
 
 </body>
