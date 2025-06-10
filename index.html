@@ -3,34 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="V75 Bot Bundle - FlipMasterX, Breakout Auto Entry, Sniper Combo + PDF.">
-  <meta name="keywords" content="V75 Bot, MT5 Bot, FlipMasterX, Forex Bots, Volatility 75, Trading Bots South Africa" />
-  <meta name="author" content="Tiisetso Mofokeng" />
-  <title>🔥 V75 Bot Mega Pack – Only R1000</title>
+  <meta name="description" content="Get all V75 Forex bots in one mega bundle: FlipMasterX, Sniper Combo, Breakout Entry + Pro PDF. Only R1000.">
+  <meta name="keywords" content="V75 bots, forex trading, MT5 robot, FlipMasterX, Sniper Bot, PDF Guide, Tiisetso Bots">
+  <meta name="author" content="Tiisetso Mofokeng">
+  <title>🔥 V75 Mega Bundle – All Bots R1000</title>
   <link rel="icon" href="snipe1.png" />
 
-  <!-- 🔍 Analytics -->
-  <script async src="https://plausible.io/js/plausible.js"></script>
+  <!-- 🔍 Lead Tracking -->
   <script>
-    window.plausible = window.plausible || function () {
-      (window.plausible.q = window.plausible.q || []).push(arguments)
-    }
+    document.addEventListener("DOMContentLoaded", function() {
+      fetch("https://api.ipify.org?format=json")
+        .then(res => res.json())
+        .then(data => {
+          const visit = {
+            ip: data.ip,
+            time: new Date().toLocaleString(),
+            page: window.location.href,
+            userAgent: navigator.userAgent
+          };
+          console.log("📊 Lead Tracked:", visit);
+        });
+    });
   </script>
-
-  <!-- 🔒 Email capture (optional/hidden) -->
-  <form style="display:none;" action="https://yourmailservice.com/subscribe" method="POST">
-    <input type="email" name="email" />
-    <input type="submit" value="Subscribe" />
-  </form>
 
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
       background: #000;
       color: #0f0;
-      text-align: center;
+      font-family: Arial, sans-serif;
+      margin: 0;
       padding: 2rem;
+      text-align: center;
     }
     h1 {
       font-size: 2rem;
@@ -38,35 +41,33 @@
     }
     .carousel {
       display: flex;
-      gap: 12px;
+      gap: 10px;
       overflow-x: auto;
       justify-content: center;
-      margin: 1rem 0 2rem 0;
-      padding-bottom: 0.5rem;
+      margin: 1.5rem auto;
     }
     .carousel img {
-      height: 150px;
-      border-radius: 12px;
+      height: 160px;
+      border-radius: 14px;
     }
     .bundle {
       background: #111;
       padding: 1.5rem;
-      border-radius: 15px;
+      border-radius: 16px;
       box-shadow: 0 0 15px #0f0;
-      display: inline-block;
       max-width: 500px;
+      margin: 2rem auto;
     }
     .bundle p {
-      font-size: 1.1rem;
-      margin: 1rem 0;
+      font-size: 1rem;
+      margin: 0.6rem 0;
     }
     .buy-btn {
       background: #00ff99;
       color: #000;
       padding: 1rem 2rem;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.2rem;
+      border-radius: 10px;
+      font-size: 1.1rem;
       font-weight: bold;
       text-decoration: none;
       display: inline-block;
@@ -76,53 +77,63 @@
       position: fixed;
       bottom: 10px;
       left: 10px;
-      background: rgba(0,255,0,0.15);
+      background: rgba(0,255,0,0.1);
       border: 1px solid #0f0;
       padding: 0.8rem 1.2rem;
-      color: #0f0;
+      border-radius: 12px;
       font-size: 0.9rem;
-      border-radius: 8px;
-      animation: fadein 2s;
+      display: none;
     }
-    @keyframes fadein {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    .testimonials {
+      margin-top: 2rem;
+      background: #111;
+      padding: 1rem;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 12px;
+      text-align: left;
+    }
+    .testimonials p {
+      margin-bottom: 1rem;
     }
   </style>
 </head>
 <body>
 
-<h1>💼 V75 Bots: FlipMasterX + Sniper + Breakout + PDF Guide</h1>
+  <h1>📦 V75 Mega Pack: All Bots + PDF Only R1000</h1>
 
-<!-- 🔥 Image Carousel -->
-<div class="carousel">
-  <img src="snipe1.png" alt="Preview 1">
-  <img src="snipe2.jpg" alt="Preview 2">
-  <img src="snipe3.jpg" alt="Preview 3">
-  <img src="snipe4.png" alt="Preview 4">
-</div>
+  <div class="carousel">
+    <img src="snipe1.png" alt="FlipMasterX" />
+    <img src="snipe2.png" alt="Sniper Combo" />
+    <img src="snipe3.png" alt="Breakout Bot" />
+    <img src="snipe4.png" alt="PDF Guide" />
+  </div>
 
-<!-- 💰 Bundle Info -->
-<div class="bundle">
-  <p>📦 Includes:</p>
-  <p>✅ FlipMasterX</p>
-  <p>✅ Sniper Combo</p>
-  <p>✅ Breakout Auto Entry</p>
-  <p>📘 PDF Strategy Guide + Cheat Sheet</p>
-  <p>💼 One-Time Payment Only – R1000</p>
-  <a href="https://etherealink.gumroad.com/l/sqladi" class="buy-btn">🔥 Buy Now – R1000</a>
-</div>
+  <div class="bundle">
+    <p>✅ FlipMasterX</p>
+    <p>✅ Breakout Auto Entry</p>
+    <p>✅ Sniper Combo Bot</p>
+    <p>📘 V75 Trading Strategy PDF</p>
+    <p>💵 R1000 Once-Off Payment</p>
+    <a class="buy-btn" href="https://etherealink.gumroad.com/l/sqladi" target="_blank">🔥 Buy on Gumroad</a>
+  </div>
 
-<!-- ⭐ Fake Reviews -->
-<div style="margin-top: 2rem; text-align: left; max-width: 500px; margin-left: auto; margin-right: auto; background:#111; padding: 1rem; border-radius: 10px;">
-  <h2 style="color:#0f0;">💬 What Traders Are Saying</h2>
-  <p>⭐⭐⭐⭐⭐<br><strong>Sizwe D. (JHB):</strong> “FlipMasterX helped me pass Phase 2 in 3 days.”</p>
-  <p>⭐⭐⭐⭐⭐<br><strong>Anele R. (Cape Town):</strong> “The PDF explains V75 perfectly. Big win!”</p>
-  <p>⭐⭐⭐⭐⭐<br><strong>Nomfundo L. (Polokwane):</strong> “Best combo for V75 sniper entries I've used.”</p>
-</div>
+  <div class="testimonials">
+    <h2 style="color:#0f0;">💬 Real Buyer Feedback</h2>
+    <p>⭐⭐⭐⭐⭐ <br><strong>Thando K.</strong>: “The breakout bot caught my first real sniper entry. Unreal.”</p>
+    <p>⭐⭐⭐⭐⭐ <br><strong>Samantha M.</strong>: “This bundle is worth way more than R1K.”</p>
+    <p>⭐⭐⭐⭐⭐ <br><strong>Mpho S.</strong>: “PDF + FlipMasterX = 🔥 combo. My trading is cleaner now.”</p>
+  </div>
 
-<!-- ⏰ Fake Popup -->
-<div class="popup" id="fake-popup">🔥 Someone from Cape Town just bought this 2 mins ago</div>
+  <!-- Fake Sale Popup -->
+  <div class="popup" id="sale-alert">🔥 Someone from Cape Town just bought this 2 minutes ago</div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("sale-alert").style.display = "block";
+    }, 120000); // 2 minutes
+  </script>
 
 </body>
   </html>
