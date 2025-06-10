@@ -1,3 +1,4 @@
+<!-- Final Paste Begins -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,16 +22,6 @@
       0%{transform:scale(1);}
       50%{transform:scale(1.07);}
       100%{transform:scale(1);}
-    }
-    .floating-banner {
-      position:fixed; bottom:10px; right:10px; background:red;
-      color:white; padding:10px 20px; border-radius:10px;
-      animation:blink 1.5s infinite; z-index:999;
-    }
-    @keyframes blink {
-      0%{opacity:1;}
-      50%{opacity:0.5;}
-      100%{opacity:1;}
     }
     .whatsapp-float {
       position:fixed; bottom:20px; left:20px; z-index:999;
@@ -98,13 +89,12 @@
 
 <div class="view-counter">📊 1,427 people viewed this page today</div>
 <div class="fake-popup">🔥 Someone just bought FlipMasterX 2 mins ago</div>
-<div class="floating-banner">🚨 Only a few licenses left!</div>
 
 <a class="whatsapp-float" href="https://wa.me/yourphonenumber?text=Hi%20I'm%20interested%20in%20your%20V75%20Bots" target="_blank">
   <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"/>
 </a>
 
-<!-- Image Section -->
+<!-- Screenshot Proof Images -->
 <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 20px;">
   <img src="snipe1.jpg" alt="FlipMasterX proof" style="width: 180px; margin: 10px; border-radius: 10px;">
   <img src="snipe2.jpg" alt="Sniper Bot results" style="width: 180px; margin: 10px; border-radius: 10px;">
@@ -112,14 +102,70 @@
   <img src="snipe4.png" alt="All Bots Bundle Result" style="width: 180px; margin: 10px; border-radius: 10px;">
 </div>
 
-<!-- FAKE AI CHAT ASSISTANT -->
+<!-- Enhanced Fake AI Chat -->
+<style>
+#chatToggle {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: #00ff88;
+  color: black;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 999;
+}
+#chatBox {
+  position: fixed;
+  bottom: 130px;
+  right: 20px;
+  width: 280px;
+  background: #1c1c1c;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px #00ff88;
+  display: none;
+  z-index: 999;
+}
+#chatBox h4 {
+  margin-top: 0;
+  color: #00ff88;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chat-msg {
+  background: #333;
+  padding: 6px 10px;
+  margin: 5px 0;
+  border-radius: 8px;
+}
+input#chatInput {
+  width: 90%;
+  padding: 6px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+}
+#exitChat {
+  background: none;
+  border: none;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+}
+</style>
+
 <button id="chatToggle">💬 Ask SniperBot AI</button>
-<div id="chatBox" style="display:none; position: fixed; bottom: 130px; right: 20px; width: 280px; background: #1c1c1c; color: white; border-radius: 10px; padding: 10px; box-shadow: 0 0 10px #00ff88; z-index:999;">
-  <h4 style="margin-top: 0; color: #00ff88;">SniperBot AI</h4>
-  <div id="chatLog" style="max-height:150px; overflow-y:auto;">
+<div id="chatBox">
+  <h4>SniperBot AI <button id="exitChat">❌</button></h4>
+  <div id="chatLog">
     <div class="chat-msg">Hi, I'm SniperBot AI 🤖 Ask me anything about the V75 Bots!</div>
   </div>
-  <input type="text" id="chatInput" placeholder="Type a question..." style="width:90%; padding:6px; margin-top:10px; border:none; border-radius:6px;" />
+  <input type="text" id="chatInput" placeholder="Type a question..." />
 </div>
 
 <script>
@@ -127,18 +173,25 @@ const toggleBtn = document.getElementById('chatToggle');
 const chatBox = document.getElementById('chatBox');
 const chatInput = document.getElementById('chatInput');
 const chatLog = document.getElementById('chatLog');
+const exitChat = document.getElementById('exitChat');
 
 const responses = {
-  "how": "Our bots work by detecting sniper entries in Volatility 75. No coding needed!",
-  "price": "Prices range from R350 to R2000 depending on the bot. FlipMasterX is most popular.",
-  "real": "Yes, 100%. These bots have helped over 1,200 traders across SA.",
-  "profit": "With the right lot size, some users made R1800+ in a single session.",
-  "apk": "Yebo! FlipMasterX and Sniper Combo come with mobile APK versions.",
-  "bundle": "The full bundle gives you all 3 bots for just R2000 — instant download."
+  "how": "We detect sniper entries in V75 using powerful bot logic. Zero delay.",
+  "price": "Bots range from R350 to R2000 depending on version.",
+  "real": "Yes champ! Real bots with real proof and reviews — check the images below.",
+  "android": "Yes, we provide APK versions for FlipMasterX and Sniper Combo.",
+  "refund": "Sorry champ, no refunds after download. We offer full preview first.",
+  "beginner": "Perfect for beginners. Just follow the included guide and install.",
+  "start": "You can start with just R200 and grow fast with sniper entries.",
+  "support": "We're always on WhatsApp to help if needed!"
 };
 
 toggleBtn.onclick = () => {
-  chatBox.style.display = chatBox.style.display === "none" ? "block" : "none";
+  chatBox.style.display = "block";
+};
+
+exitChat.onclick = () => {
+  chatBox.style.display = "none";
 };
 
 chatInput.addEventListener("keydown", function(event) {
@@ -163,7 +216,7 @@ chatInput.addEventListener("keydown", function(event) {
         }
       }
       if (!answered) {
-        reply.textContent = "🤖 I'm still learning. Please WhatsApp us for more.";
+        reply.textContent = "🤖 I'm still learning. Please WhatsApp us directly.";
       }
       chatLog.appendChild(reply);
       chatInput.value = "";
@@ -174,4 +227,4 @@ chatInput.addEventListener("keydown", function(event) {
 </script>
 
 </body>
-    </html>
+  </html>
