@@ -3,135 +3,186 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Get all V75 Forex bots in one mega bundle: FlipMasterX, Sniper Combo, Breakout Entry + Pro PDF. Only R1000.">
-  <meta name="keywords" content="V75 bots, forex trading, MT5 robot, FlipMasterX, Sniper Bot, PDF Guide, Tiisetso Bots">
-  <meta name="author" content="Tiisetso Mofokeng">
-  <title>🔥 V75 Mega Bundle – All Bots R1000</title>
-  <link rel="icon" href="snipe1.png" />
 
-  <!-- 🔍 Lead Tracking -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      fetch("https://api.ipify.org?format=json")
-        .then(res => res.json())
-        .then(data => {
-          const visit = {
-            ip: data.ip,
-            time: new Date().toLocaleString(),
-            page: window.location.href,
-            userAgent: navigator.userAgent
-          };
-          console.log("📊 Lead Tracked:", visit);
-        });
-    });
-  </script>
+  <title>Forex Tools | FlipMasterX, V75 Sniper, Breakout Bot</title>
+  <meta name="description" content="Secure Forex Bots including FlipMasterX, V75 Sniper, and Breakout Auto Entry. Safe HTTPS site built for real traders. Instant access.">
+  <meta name="keywords" content="forex bots, FlipMasterX, V75 sniper, MT5 signals, breakout bot, forex tools South Africa, trading bots, Ethereal Ink by Tiisetso">
+  <meta name="author" content="Ethereal Ink by Tiisetso">
+  <meta property="og:title" content="Forex Bot Vault - Real Tools for Real Traders" />
+  <meta property="og:description" content="Unlock FlipMasterX, V75 Sniper, Breakout Bots and more. 🔒 HTTPS secured. Built in Africa. Trusted worldwide." />
+  <meta property="og:image" content="logo.png" />
+  <meta property="og:url" content="https://forex.etherealinkbytiisetso.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
   <style>
     body {
-      background: #000;
-      color: #0f0;
-      font-family: Arial, sans-serif;
-      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d0d0d;
+      color: #ffffff;
       padding: 2rem;
       text-align: center;
     }
     h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       color: #00ff99;
     }
-    .carousel {
-      display: flex;
-      gap: 10px;
-      overflow-x: auto;
-      justify-content: center;
-      margin: 1.5rem auto;
-    }
-    .carousel img {
-      height: 160px;
-      border-radius: 14px;
-    }
-    .bundle {
-      background: #111;
-      padding: 1.5rem;
-      border-radius: 16px;
-      box-shadow: 0 0 15px #0f0;
-      max-width: 500px;
-      margin: 2rem auto;
-    }
-    .bundle p {
-      font-size: 1rem;
-      margin: 0.6rem 0;
-    }
-    .buy-btn {
+    .button {
+      display: inline-block;
+      padding: 1rem 2rem;
       background: #00ff99;
       color: #000;
-      padding: 1rem 2rem;
-      border-radius: 10px;
-      font-size: 1.1rem;
       font-weight: bold;
+      border-radius: 8px;
       text-decoration: none;
-      display: inline-block;
-      margin-top: 1rem;
+      margin: 1.5rem 0;
     }
-    .popup {
-      position: fixed;
-      bottom: 10px;
-      left: 10px;
-      background: rgba(0,255,0,0.1);
-      border: 1px solid #0f0;
-      padding: 0.8rem 1.2rem;
-      border-radius: 12px;
-      font-size: 0.9rem;
-      display: none;
-    }
-    .testimonials {
-      margin-top: 2rem;
-      background: #111;
-      padding: 1rem;
-      max-width: 520px;
-      margin-left: auto;
-      margin-right: auto;
-      border-radius: 12px;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 2rem auto;
+      max-width: 400px;
       text-align: left;
     }
-    .testimonials p {
-      margin-bottom: 1rem;
+    ul li::before {
+      content: '✅ ';
+      color: #00ff99;
+    }
+    .section {
+      margin: 3rem 0;
+    }
+    .review, .comment {
+      background: #1a1a1a;
+      border-left: 5px solid #00ff99;
+      margin: 1rem auto;
+      padding: 1rem;
+      max-width: 600px;
+      font-style: italic;
+      border-radius: 6px;
+    }
+    .review strong, .comment strong {
+      display: block;
+      margin-top: 0.5rem;
+      color: #00ff99;
+    }
+    #popup {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: #111;
+      border: 2px solid #00ff99;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      color: #fff;
+      display: none;
+      z-index: 1000;
+      box-shadow: 0 0 15px #00ff99aa;
+    }
+    #views {
+      color: #00ff99;
+      font-weight: bold;
+    }
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #999;
     }
   </style>
 </head>
 <body>
+  <h1>🔥 Forex Bot Vault Now Live 🔥</h1>
+  <p>Secure bots that do the work. Safe checkout. Real results.</p>
+  <p>👀 <span id="views">Loading...</span> views today</p>
 
-  <h1>📦 V75 Mega Pack: All Bots + PDF Only R1000</h1>
+  <a href="#bots" class="button">Browse All Bots</a>
 
-  <div class="carousel">
-    <img src="snipe3.png" alt="Breakout Bot" />
-    <img src="snipe4.png" alt="PDF Guide" />
+  <div id="bots" class="section">
+    <h2>Included Bots:</h2>
+    <ul>
+      <li>FlipMasterX - Catch sniper setups</li>
+      <li>V75 Sniper Combo - Volatility domination</li>
+      <li>Breakout Auto Entry Bot - No delay, no noise</li>
+      <li>MT4 / MT5 Signal Bots - Clean pro setups</li>
+      <li>Full Bundle Access - All bots in one 🔥</li>
+    </ul>
+    <p>🔒 100% HTTPS Secure · Instant Mobile Access · Built in Africa · Used Worldwide</p>
   </div>
 
-  <div class="bundle">
-    <p>✅ FlipMasterX</p>
-    <p>✅ Breakout Auto Entry</p>
-    <p>✅ Sniper Combo Bot</p>
-    <p>📘 V75 Trading Strategy PDF</p>
-    <p>💵 R1000 Once-Off Payment</p>
-    <a class="buy-btn" href="https://etherealink.gumroad.com/l/sqladi" target="_blank">🔥 Buy on Gumroad</a>
+  <div class="section">
+    <h2>What Traders Are Saying 💬</h2>
+    <div id="reviews"></div>
+    <div id="comments"></div>
   </div>
 
-  <div class="testimonials">
-    <h2 style="color:#0f0;">💬 Real Buyer Feedback</h2>
-    <p>⭐⭐⭐⭐⭐ <br><strong>Thando K.</strong>: “The breakout bot caught my first real sniper entry. Unreal.”</p>
-    <p>⭐⭐⭐⭐⭐ <br><strong>Samantha M.</strong>: “This bundle is worth way more than R1K.”</p>
-    <p>⭐⭐⭐⭐⭐ <br><strong>Mpho S.</strong>: “PDF + FlipMasterX = 🔥 combo. My trading is cleaner now.”</p>
-  </div>
+  <a href="https://forex.etherealinkbytiisetso.com" class="button">🔥 Access Now</a>
 
-  <!-- Fake Sale Popup -->
-  <div class="popup" id="sale-alert">🔥 Someone from Cape Town just bought this 2 minutes ago</div>
+  <div id="popup" class="popup"></div>
+
+  <footer>
+    Site by Ethereal Ink • HTTPS Secure • Powered by Hustlers  
+  </footer>
 
   <script>
-    setTimeout(() => {
-      document.getElementById("sale-alert").style.display = "block";
-    }, 120000); // 2 minutes
-  </script>
+    // Daily Review Rotation
+    const reviews = [
+      { text: "⭐⭐⭐⭐⭐ I made 2x using FlipMasterX in just 3 days!", name: "Tshepo | Pretoria" },
+      { text: "⭐⭐⭐⭐⭐ V75 Sniper caught 4 trades back-to-back. 🔥", name: "Lesedi | Durban" },
+      { text: "⭐⭐⭐⭐⭐ Best bot bundle I ever paid for. No regrets.", name: "Kgosi | Botswana" },
+      { text: "⭐⭐⭐⭐⭐ Clean, fast, deadly accurate. MT5 bot is elite.", name: "Zanele | Cape Town" }
+    ];
+    const today = new Date().getDate();
+    const review = reviews[today % reviews.length];
+    document.getElementById("reviews").innerHTML = `
+      <div class="review">${review.text}<strong>- ${review.name}</strong></div>
+    `;
 
+    // Buyer Popups
+    const buyers = [
+      "Nathi from Joburg just bought FlipMasterX 🔥",
+      "Lerato from Cape Town grabbed the Bundle Deal 💼",
+      "Sipho from Durban purchased Breakout Bot ✅",
+      "Zinhle from Pretoria just got V75 Sniper Combo 📈"
+    ];
+    const popup = document.getElementById("popup");
+    function showPopup() {
+      const msg = buyers[Math.floor(Math.random() * buyers.length)];
+      popup.textContent = msg;
+      popup.style.display = "block";
+      setTimeout(() => { popup.style.display = "none"; }, 5000);
+    }
+    setTimeout(() => {
+      showPopup();
+      setInterval(showPopup, 15000);
+    }, 5000);
+
+    // Smart View Counter
+    let views = Math.floor(100 + Math.random() * 100); // between 100–200
+    document.getElementById("views").innerText = `${views} / 200`;
+
+    // Fake Live Comments
+    const comments = [
+      "🔥 Just bought it, looks promising!",
+      "Bots looking clean — excited to test V75 Sniper.",
+      "How does the Breakout one work? Anyone tried?",
+      "Loving the layout, feels secure and real.",
+      "FlipMasterX might be my new favorite."
+    ];
+    const names = ["@ZeeTrader", "@KingPips", "@FxQueen", "@Mandla_X", "@ThabiPips"];
+    const commentBox = document.getElementById("comments");
+
+    function addComment() {
+      const c = comments[Math.floor(Math.random() * comments.length)];
+      const n = names[Math.floor(Math.random() * names.length)];
+      const div = document.createElement("div");
+      div.className = "comment";
+      div.innerHTML = `${c}<strong>- ${n}</strong>`;
+      commentBox.prepend(div);
+      if (commentBox.children.length > 5) {
+        commentBox.removeChild(commentBox.lastChild);
+      }
+    }
+    setInterval(addComment, 60000); // every 60s
+  </script>
 </body>
-</html>
+  </html>
